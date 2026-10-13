@@ -1,4 +1,4 @@
-module Assignments.Assignment_1.Arith where
+module Arith where
 
 data ArithTerm
     = TmTrue
@@ -7,5 +7,5 @@ data ArithTerm
     | TmSucc ArithTerm
     | TmPred ArithTerm
     | TmIsZero ArithTerm
-    | TmIf ArithTerm ArithTerm ArithTerm
+    | TmIfThenElse ArithTerm ArithTerm ArithTerm
     deriving (Show, Eq)

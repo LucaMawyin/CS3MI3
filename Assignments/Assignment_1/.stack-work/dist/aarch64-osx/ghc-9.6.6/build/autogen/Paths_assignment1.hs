@@ -46,12 +46,12 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
-bindir     = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment 1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/bin"
-libdir     = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment 1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/lib/aarch64-osx-ghc-9.6.6/assignment1-0.1.0.0-4zeokTPxBXxJCEv8g0gSJZ"
-dynlibdir  = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment 1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/lib/aarch64-osx-ghc-9.6.6"
-datadir    = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment 1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/share/aarch64-osx-ghc-9.6.6/assignment1-0.1.0.0"
-libexecdir = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment 1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/libexec/aarch64-osx-ghc-9.6.6/assignment1-0.1.0.0"
-sysconfdir = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment 1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/etc"
+bindir     = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment_1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/bin"
+libdir     = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment_1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/lib/aarch64-osx-ghc-9.6.6/assignment1-0.1.0.0-IhNkYfy8dyi3aGgBbSX5ZH"
+dynlibdir  = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment_1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/lib/aarch64-osx-ghc-9.6.6"
+datadir    = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment_1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/share/aarch64-osx-ghc-9.6.6/assignment1-0.1.0.0"
+libexecdir = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment_1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/libexec/aarch64-osx-ghc-9.6.6/assignment1-0.1.0.0"
+sysconfdir = "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment_1/.stack-work/install/aarch64-osx/cd7927711140ff1dafab38a9baf47e69fd695058da51cc95df4c7c8d67f54cb8/9.6.6/etc"
 
 getBinDir     = catchIO (getEnv "assignment1_bindir")     (\_ -> return bindir)
 getLibDir     = catchIO (getEnv "assignment1_libdir")     (\_ -> return libdir)
