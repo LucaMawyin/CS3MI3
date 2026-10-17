@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1791851738.70514 "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment_1/writeup/Assignment1.tex" "Assignment1.pdf" "Assignment1" 1791851739.60625 0
-  "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment_1/writeup/Assignment1.tex" 1791851738.48427 8225 7b9c8fdc242a1ed92212d0eed7f7e06c ""
+["pdflatex"] 1792245250.39267 "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment_1/writeup/Assignment1.tex" "Assignment1.pdf" "Assignment1" 1792245251.36704 0
+  "/Users/lucamawyin/Desktop/Code/CS3MI3/Assignments/Assignment_1/writeup/Assignment1.tex" 1792245250.10902 8224 7ba74d3e6fef6a886807bd8ed7bdaafc ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -204,9 +204,9 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1774467206 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1774209607 3636776 dc5fa9b6b1453b9d196cd42edf876004 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "Assignment1.aux" 1791851739.54515 480 4cf7d87ca3e9a68d868cb64992e18838 "pdflatex"
-  "Assignment1.out" 1791851739.54564 105 f575326d5f31df0ea941e70152e6a9ed "pdflatex"
-  "Assignment1.tex" 1791851738.48427 8225 7b9c8fdc242a1ed92212d0eed7f7e06c ""
+  "Assignment1.aux" 1792245251.30191 480 4cf7d87ca3e9a68d868cb64992e18838 "pdflatex"
+  "Assignment1.out" 1792245251.30235 105 f575326d5f31df0ea941e70152e6a9ed "pdflatex"
+  "Assignment1.tex" 1792245250.10902 8224 7ba74d3e6fef6a886807bd8ed7bdaafc ""
   (generated)
   "Assignment1.aux"
   "Assignment1.log"
