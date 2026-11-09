@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.24)  8 NOV 2026 10:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.24)  9 NOV 2026 18:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/lucam/Desktop/Code/CS3MI3/Assignments/Assignment_2/writeup/Assignment1.tex
-(c:/Users/lucam/Desktop/Code/CS3MI3/Assignments/Assignment_2/writeup/Assignment1.tex
+**c:/Users/lucam/Desktop/Code/CS3MI3/Assignments/Assignment_2/writeup/Assignment2.tex
+(c:/Users/lucam/Desktop/Code/CS3MI3/Assignments/Assignment_2/writeup/Assignment2.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
 (C:\Users\lucam\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -637,8 +637,8 @@ Package translations Info: No language package found. I am going to use `english
  (C:\Users\lucam\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count369
-) (Assignment1.aux)
-\openout1 = `Assignment1.aux'.
+) (Assignment2.aux)
+\openout1 = `Assignment2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
 LaTeX Font Info:    ... okay on input line 130.
@@ -719,9 +719,9 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.16).
 
 Package hyperref Info: Link coloring ON on input line 130.
-(Assignment1.out) (Assignment1.out)
+(Assignment2.out) (Assignment2.out)
 \@outlinefile=\write5
-\openout5 = `Assignment1.out'.
+\openout5 = `Assignment2.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -730,32 +730,40 @@ Package caption Info: End \AtBeginDocument code.
 [1
 
 {C:/Users/lucam/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 162.
+ (C:\Users\lucam\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 162.
+ (C:\Users\lucam\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.161 \end{document}
-                     [1] (Assignment1.aux)
+l.216 \end{document}
+                     [1] (Assignment2.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
-Package rerunfilecheck Info: File `Assignment1.out' has not changed.
-(rerunfilecheck)             Checksum: 9534070C232AA0A3F935CB7C3E3F8D46;35.
+Package rerunfilecheck Info: File `Assignment2.out' has not changed.
+(rerunfilecheck)             Checksum: C4A78932A39E3CA429CA63F6CA31738E;70.
  ) 
 Here is how much of TeX's memory you used:
- 37832 strings out of 468130
- 918329 string characters out of 5430633
- 1375996 words of memory out of 5000000
- 65936 multiletter control sequences out of 15000+600000
- 628334 words of font info for 45 fonts, out of 8000000 for 9000
+ 37874 strings out of 468130
+ 919102 string characters out of 5430633
+ 1385996 words of memory out of 5000000
+ 65963 multiletter control sequences out of 15000+600000
+ 630201 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,5n,107p,816b,1071s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Assignment1.pdf (2 pages, 50364 bytes).
+ 102i,11n,107p,816b,1071s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/lucam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Assignment2.pdf (2 pages, 108599 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 PDF objects out of 1000 (max. 8388607)
+ 4 named destinations out of 1000 (max. 500000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
