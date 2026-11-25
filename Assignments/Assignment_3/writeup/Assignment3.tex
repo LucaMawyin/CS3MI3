@@ -1,0 +1,315 @@
+%% Determines the type of document (including standard settings for layout).
+\documentclass[letterpaper]{article}
+
+
+
+%% Package to control the size of a page: the standard margins used by LaTeX are
+%% very wide!
+\usepackage[margin=1in]{geometry}
+
+
+%% Packages add functionality to the document. The AMS packages are standard
+%% packages to support various mathematical notations. AMS stands for American
+%% Mathematical Society, the organization that maintains these packages.
+\usepackage{amsmath,amsthm,amssymb}
+
+%% Theorems-like environments using functionality provided by amsthm.
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+    %% [section] at the end specifies that theorems should be numbered
+    %% per-section: Section x starts with theorem-like x.1 and so on, ...
+\newtheorem{proposition}[theorem]{Proposition}
+    %% [theorem] in the middle specifies: use the same counter as the theorem
+    %% environment: here we number all theorem-like environments consecutively.
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+
+%% Support for nicely formatted tables.
+\usepackage{booktabs}
+
+
+%% Support for colors & colors in tables.
+\usepackage[table]{xcolor}
+
+% Seven colors safe for use color blindness.
+% Colors taken from doi:10.1038/nmeth.1618.
+\definecolor{cbOrange}{RGB}{230,159,0}
+\definecolor{cbSkyBlue}{RGB}{86,180,233}
+\definecolor{cbBluishGreen}{RGB}{0,158,115}
+\definecolor{cbYellow}{RGB}{240,228,66}
+\definecolor{cbBlue}{RGB}{0,114,178}
+\definecolor{cbVermillion}{RGB}{213,94,0}
+\definecolor{cbReddischPurple}{RGB}{204,121,167}
+
+
+%% Notation used in this document.
+\newcommand{\n}{\mathbf{n}} %% Num. Replicas.
+\newcommand{\f}{\mathbf{f}} %% Num. Faulty Replicas.
+
+%% Misc. Math notation.
+\newcommand{\BigO}{\mathcal{O}}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\AName}[1]{\textsc{#1}}
+\newcommand{\Var}[1]{\texttt{#1}}
+
+
+%% Algorithms.
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+\newcommand{\GETS}{:=}
+
+
+%% Formatting SI-units.
+\usepackage{siunitx}
+\sisetup{per-mode=symbol}
+
+
+%% TikZ: for creating figures.
+\usepackage{tikz}
+
+%% Configuration for figures: Nicer arrows.
+\usetikzlibrary{arrows.meta}
+\tikzset{>=Stealth}
+
+
+%% pgfplots: drawing plots using TikZ.
+\usepackage{pgfplots}
+%% Configuration for plots: Use color-blind friendly colors.
+\pgfplotscreateplotcyclelist{cbSafeList}{
+    very thick,solid,cbOrange,every mark/.append style={solid},mark=*\\
+    very thick,solid,cbSkyBlue,every mark/.append style={solid},mark=*\\
+    very thick,solid,cbBluishGreen,every mark/.append style={solid},mark=*\\
+    very thick,solid,cbYellow,every mark/.append style={solid},mark=*\\
+    very thick,solid,cbBlue,every mark/.append style={solid},mark=*\\
+    very thick,solid,cbVermillion,every mark/.append style={solid},mark=*\\
+    very thick,solid,cbReddischPurple,every mark/.append style={solid},mark=*\\
+    very thick,solid,black,every mark/.append style={solid},mark=*\\
+}
+\pgfplotsset{
+    legend style={font=\small},
+    compat=1.16,
+    width=260pt,
+    height=140pt,
+    legend cell align=left,
+    xlabel near ticks,
+    ylabel near ticks,
+    every axis/.append style={
+        cycle list name=cbSafeList,
+        ymin=0,
+        enlargelimits=0.05,
+        mark size=1pt,
+        ylabel style={align=center},
+        xlabel style={align=center},
+        title style={align=center}
+    }
+}
+
+%% PgfplotsTable: loading data files to use with pgfplots.
+\usepackage{pgfplotstable}
+
+
+%% Support for hyperlinks and urls. The setting ``colorlinks'' sets how links
+%% are shown in the document (with a color, without underline). We put hyperref
+%% last---it has a tendency to break other packages when loaded before them.
+\usepackage[colorlinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{pgffor}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage{titlesec}
+
+
+\begin{document}
+
+%% First the meta-data of the doucment: title,
+
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    
+    {\Huge CS3MI3 Assignment 3}\\[2cm]
+    
+    {\large Luca Mawyin}\\[0.5cm]
+    
+    {\large Dr.\ JP Rooney}\\[0.5cm]
+
+    {\large \today}\\[2cm]
+
+    {\Large McMaster University}
+
+    \vfill
+    \begin{flushleft}
+
+        {\large \textbf{Student Number: }400531739}\\[0.5cm]
+        {\large \textbf{MacID:} mawyinl}
+    \end{flushleft}
+
+\end{titlepage}
+
+\renewcommand{\thesection}{Question \arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\titleformat{\subsection}
+    {\normalfont\Large\bfseries}
+    {\thesubsection}
+    {1em}
+    {}
+
+\stepcounter{section}
+
+\subsection{}
+
+Firstly, we are given the definitions:
+\begin{align*}
+    c_0 &= \lambda{s}.~\lambda{z}.~z\\
+    iszro &= \lambda{m}.~m~(\lambda{x}.~fls)~tru\\
+    fls &= \lambda{t}.~\lambda{f}.~f\\
+    tru &= \lambda{t}.~\lambda{f}.~t\\
+\end{align*}
+In order to evaluate 
+\begin{align*}
+    r &= iszro~c_0
+\end{align*}
+We will first apply $iszro$ to $c_0$ and evaluate:
+\begin{align*}
+    iszro~c_0 &\to (\lambda{m}.~m~(\lambda{x}.~fls)~tru)~c_0\\
+    &\to c_0~(\lambda{x}.~fls)~tru
+\end{align*}
+Then we will substitute $c_0$ and evaluate:
+\begin{align*}
+    c_0~(\lambda{x}.~fls)~tru &\to (\lambda{s}.~\lambda{z}.~z)~(\lambda{x}.~fls)~tru\\
+    &\to (\lambda{z}.~z)~tru\\
+    &\to tru
+\end{align*}
+Therefore $r = iszro~c_0$ evaluates to $r=tru$.
+
+\subsection{}
+
+Firstly, we are given the definitions:
+\begin{align*}
+    or &= \lambda{b}.~\lambda{c}.~b~tru~c\\
+    fls &= \lambda{t}.~\lambda{f}.~f\\
+    tru &= \lambda{t}.~\lambda{f}.~t\\
+\end{align*}
+In order to evaluate 
+\begin{align*}
+    s &= or~tru~fls
+\end{align*}
+Firstly we will substitute $or$ and evaluate:
+\begin{align*}
+    or~tru~fls &\to (\lambda{b}.~\lambda{c}.~b~tru~c)~tru~fls\\
+    &\to (\lambda{c}.~tru~tru~c)~fls\\
+    &\to tru~tru~fls
+\end{align*}
+Then we will substitute $tru$ and evaluate:
+\begin{align*}
+    tru~tru~fls &\to (\lambda{t}.~\lambda{f}.~t)~tru~fls\\
+    &\to (\lambda{f}.~tru)~fls\\
+    &\to tru
+\end{align*}
+Therefore $s = or~tru~fls$ evalutates to $s = tru$.
+
+\subsection{}
+
+Firstly, we are given the definitions:
+\begin{align*}
+    and &= \lambda{b}.~\lambda{c}.~b~c~fls\\
+    fls &= \lambda{t}.~\lambda{f}.~f\\
+    tru &= \lambda{t}.~\lambda{f}.~t\\
+\end{align*}
+In order to evaluate 
+\begin{align*}
+    t &= and~tru~fls
+\end{align*}
+Firstly we will substitute $and$ and evaluate:
+\begin{align*}
+    and~tru~fls &\to (\lambda{b}.~\lambda{c}.~b~c~fls)~tru~fls\\
+    &\to (\lambda{c}.~tru~c~fls)~fls\\
+    &\to tru~fls~fls
+\end{align*}
+Then we will substitute $tru$ and evaluate:
+\begin{align*}
+    tru~fls~fls &\to (\lambda{t}.~\lambda{f}.~t)~fls~fls\\
+    &\to (\lambda{f}.~fls)~fls\\
+    &\to fls
+\end{align*}
+Therefore $t = and~tru~fls$ evaluates to $t = fls$.
+\subsection{}
+
+Using the results from the previous parts, we have definitions:
+\begin{align*}
+    r &= tru\\ 
+    s &= tru\\
+    t &= fls\\
+    test &= \lambda{l}.~\lambda{m}.~\lambda{n}.~l~m~n
+\end{align*}
+In order to evaluate:
+\begin{align*}
+    test~r~s~t
+\end{align*}
+Firstly we will substitute $r$, $s$, and $t$:
+\begin{align*}
+    test~r~s~t &\to^* test~tru~s~t\\
+    &\to^* test~tru~tru~t\\
+    &\to^* test~tru~tru~fls
+\end{align*}
+Then we will expand $test$ and beta reduce:
+\begin{align*}
+    test~tru~tru~fls &\to (\lambda{l}.~\lambda{m}.~\lambda{n}.~l~m~n)~tru~tru~fls\\
+    &\to (\lambda{m}.~\lambda{n}.~tru~m~n)~tru~fls\\
+    &\to (\lambda{n}.~tru~tru~n)~fls\\
+    &\to tru~tru~fls\\
+    &\to (\lambda{f}.~tru)~fls\\
+    &\to tru
+\end{align*}
+Therefore $test~r~s~t$ evaluates to $tru$.
+
+\section{}
+
+First we will show the rules for both languages. For arith we have:
+\begin{center}
+    $\frac{}{\text{if true then $t_2$ else $t_3\to{t_2}$}}$\\[1em]
+    $\frac{}{\text{if false then $t_2$ else $t_3\to{t_3}$}}$\\[1em]
+    $\frac{t_1\to{t'_1}}{\text{if true then $t_2$ else $t_3\to{t_2}$}\to\text{if $t'_1$ then $t_2$ else $t_3\to{t_2}$}}$
+\end{center}
+And in L-Bools we have:
+\begin{align*}
+    tru &= \lambda{m}.~\lambda{n}.~m\\
+    fls &= \lambda{m}.~\lambda{n}.~n\\
+    test &= \lambda{l}.~\lambda{m}.~\lambda{n}.~l~m~n
+\end{align*}
+Given the definitions, the evaluation relations do not agree. This is because arith will evaluate the condition before choosing the branch to return. This differs from L-Bools, as it will evaluate the branches first using a call-by-value evaluation that is grouped into a single step, before selecting one. We can demonstrate the difference using an example of an expression.\\[1em]
+We will first represent it in arith:
+\begin{align*}
+    s &=\text{if false then false else }(\text{if true then true else false})\\
+    &\to \text{if true then true else false}\\
+    &\to \text{true}\\
+\end{align*}
+Then, in L-Bools we get:
+\begin{align*}
+    J(s) &= test~fls~fls~(test~tru~tru~fls)\\
+    &\to test~fls~fls~tru\\
+    &\to tru
+\end{align*}
+This shows that they do not agree. We can elaborate further by defining $s'$ for arith:
+\begin{align*}
+    s' &= \text{if true then true else false}\\
+    s &\to s'
+\end{align*}
+and L-Bools:
+\begin{align*}
+    J(s') &= test~tru~tru~fls\\
+    J(s) &\to tru
+\end{align*}
+As shown, arith evaluates the expression to the branch, while L-Bools evaluates the expression to $test$. Consequently, this shows that the evaluation strategies do not agree.
+
+\end{document}
